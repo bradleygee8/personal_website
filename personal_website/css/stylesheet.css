@@ -1,0 +1,42 @@
+
+body{background-color: beige;}
+p{color: blue;
+}
+h1{color : red; font-family: 'Montserrat', sans-serif;}
+h2{color: blue}
+nav{background-color: lightblue; text-align:center; display:flex; padding:10px;
+    justify-content: center;}
+nav>a{ padding: 10px; }
+
+
+hr { width:100%;
+    color:grey;
+    grid-column-start: 1;
+    grid-column-end: 3;}
+
+.item {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 15px ;
+
+}
+
+
+.item p:nth-of-type(1){
+
+grid-column:2/2;
+margin:0px}
+
+@media screen and (max-width:600px){
+    nav{ display:grid;
+        padding:5px
+    }
+    .item{
+        display:grid;
+        grid-template-rows: 20px;
+        grid-template-columns: 1fr;
+    }
+    .item p:nth-of-type(1){ 
+        grid-column:1/1;
+
+}}
