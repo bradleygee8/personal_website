@@ -13,17 +13,17 @@ while (i< courselist.length){
             num+=courselist[i].code[count]
     }
 
-    if (answer.length!=4){
+    if (answer.length!=4 || isNaN(answer)){
         answer = prompt("Invalid data entered")
         i=0
     }
     else if (num.trim() == answer){
         alert(`Yes I am taking the course: ${courselist[i].code} ${courselist[i].name}`);
-        console.log("Successfully Added to the list")
         break;}
 
     else if (i == courselist.length-1){
         courselist.push({code: answer, name: null});
+        console.log("Successfully Added to the list")
         break;}
     i+=1}
 
